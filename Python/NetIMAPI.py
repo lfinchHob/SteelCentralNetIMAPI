@@ -7,7 +7,6 @@ _urls = {
 }
 
 def get(_path):
-    print(_path)
     return requests.get(_path, verify=False, auth=(config.username, config.password))
 
 def post(_path, _data):
@@ -32,4 +31,4 @@ def get_devices():
 
 def get_device(_device_id):
     path = build_path(config.base_url, "device").format(id=_device_id)
-    print(path)
+    print(get(path).json())

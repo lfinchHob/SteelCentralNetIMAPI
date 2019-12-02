@@ -1,7 +1,9 @@
 import NetIMAPI
 
 def main():
-    NetIMAPI.get_device(123) 
+    print("Provide the device id: ")
+    deviceid = input()
+    NetIMAPI.get_device(deviceid) 
 
 if __name__ == '__main__':
     main()
