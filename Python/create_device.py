@@ -20,8 +20,7 @@ model = {
         "accessAddress": "string",
         "snmpVersion": 1,
         "snmpCommunityString": "string",
-      },
-      "links": {}
+      }
     }
   ]}
 
@@ -47,9 +46,8 @@ def main():
     model['items'][0]['deviceAccessInfo']['description'] = device_description 
     model['items'][0]['deviceAccessInfo']['accessAddress'] = device_access_address 
     model['items'][0]['deviceAccessInfo']['snmpCommunityString'] = device_community 
-    print(model)    
 
-    #NetIMAPI.get_device(device_model) 
+    NetIMAPI.create_device(model) 
 
 if __name__ == '__main__':
     main()
